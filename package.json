@@ -1,0 +1,23 @@
+{
+	"devDependencies": {
+		"@types/node": "^18.16.3",
+		"@typescript-eslint/eslint-plugin": "^5.59.1",
+		"@typescript-eslint/parser": "^5.59.1",
+		"@vue/cli-plugin-typescript": "^5.0.8",
+		"@vue/test-utils": "^2.0.0-rc.18",
+		"eslint": "^8.39.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-vue": "^9.11.0",
+		"prettier": "^2.8.8",
+		"typescript": "^5.0.4",
+		"vue-jest": "^5.0.0-alpha.10"
+	},
+	"scripts": {
+		"test": "jest",
+		"dev": "your-dev-command",
+		"build": "your-build-command"
+	},
+	"dependencies": {
+		"pinia": "^2.0.35"
+	}
+}
