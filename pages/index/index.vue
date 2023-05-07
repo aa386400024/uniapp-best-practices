@@ -24,7 +24,7 @@ export default defineComponent({
   async created() {
       // 使用 fetchTodos 函数
       const todoList = await todos.fetchTodos()
-	  console.log(todoList, 'todoList');
+	  // console.log(todoList, 'todoList');
     },
 });
 </script>
