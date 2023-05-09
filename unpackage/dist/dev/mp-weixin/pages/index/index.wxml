@@ -1,0 +1,1 @@
+<view><text>Count: {{a}}</text><text>Double Count: {{b}}</text><button bindtap="{{c}}">Increment</button></view>
