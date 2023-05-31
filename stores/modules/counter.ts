@@ -1,22 +1,22 @@
-import { defineStore } from 'pinia'
+const { defineStore } = require('pinia');
 
-interface CounterState {
-	count: number
-}
-
-export const useCounterStore = defineStore('counter', {
-	state: (): CounterState => {
-		return { count: 0 }
+const useCounterStore = defineStore('counter', {
+	state: () => {
+		return { count: 0 };
 	},
 	getters: {
-		doubleCount(): number {
-			return this.count * 2
-		},
+		doubleCount() {
+			return this.count * 2;
+		}
 	},
 	actions: {
-		increment(): void {
+		increment() {
 			console.log('Increment method called');
-			this.count++
-		},
-	},
-})
+			this.count++;
+		}
+	}
+});
+
+module.exports = {
+	useCounterStore
+};
