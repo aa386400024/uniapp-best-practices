@@ -31,6 +31,17 @@
 					"TESTING": true
 				}
 			},
+			"h5-dev": {
+				"title": "H5开发环境",
+				"browser": "chrome",
+				"env": {
+					"UNI_PLATFORM": "h5",
+					"BASE_URL": "https://cat-fact.herokuapp.com"
+				},
+				"define": {
+					"DEV": true
+				}
+			},
 			"mp-weixin-production": {
 				"title": "微信小程序 - 生产环境",
 				"env": {

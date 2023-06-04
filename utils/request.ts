@@ -1,7 +1,6 @@
 // utils/request.ts
 
-import { BASE_URL, TIMEOUT } from '@/config/env'
-import { CUSTOM_HEADERS } from '@/config/headers'
+import { BASE_URL, TIMEOUT, CUSTOM_HEADERS } from '@/config'
 import { CancelToken } from '@/utils/cancel-token'
 import { responseInterceptor, requestInterceptor } from '@/api/interceptors'
 
