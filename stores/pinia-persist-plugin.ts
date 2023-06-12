@@ -1,5 +1,5 @@
 import { PiniaPluginContext, PiniaPlugin } from 'pinia';
-import { STORAGE_KEY } from '@/config/env';
+import { STORAGE_KEY } from '@/config';
 
 // 定义持久化状态的键
 type PersistStateKeys = readonly { storeId: string; key: string }[];

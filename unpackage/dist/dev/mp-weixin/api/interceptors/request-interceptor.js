@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js");exports.requestInterceptor=function(r){const t=e.index.getStorageSync("token");return t&&(r.headers={...r.headers,Authorization:`Bearer ${t}`}),r};

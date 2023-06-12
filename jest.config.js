@@ -9,5 +9,5 @@ module.exports = {
 		'^.+\\.vue$': 'vue-jest',
 		'^.+\\.tsx?$': 'ts-jest',
 	},
-	testMatch: ['**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'],
+	testMatch: ["<rootDir>/pages/**/*test.[jt]s?(x)"],
 };
