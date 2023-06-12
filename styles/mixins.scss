@@ -1,0 +1,15 @@
+/* mixins.scss 定义混入，用于复用样式片段 */
+
+/* Flexbox Mixin */
+@mixin flexbox($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+/* Transition Mixin */
+@mixin transition($property: all, $duration: 0.3s, $timing-function: ease-in-out) {
+  transition: $property $duration $timing-function;
+}
+
+/* ... */

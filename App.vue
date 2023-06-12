@@ -12,6 +12,8 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+@import '@/styles/global.scss'
 	/*每个页面公共css */
+	
 </style>
