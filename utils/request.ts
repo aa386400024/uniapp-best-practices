@@ -1,6 +1,6 @@
 // utils/request.ts
 
-import { BASE_URL, TIMEOUT, CUSTOM_HEADERS } from '@/config'
+import config from '@/config'
 import { CancelToken } from '@/utils/cancel-token'
 import { responseInterceptor, requestInterceptor } from '@/api/interceptors'
 
@@ -14,14 +14,14 @@ interface RequestOptions {
 }
 
 function request(options: RequestOptions): Promise<UniApp.RequestSuccessCallbackResult> {
-  const { url, method = 'GET', data, headers, timeout = TIMEOUT, cancelToken } = requestInterceptor(options)
+  const { url, method = 'GET', data, headers, timeout = config.api.timeout, cancelToken } = requestInterceptor(options)
 
   return new Promise((resolve, reject) => {
     const requestTask = uni.request({
-      url: BASE_URL + url,
+      url: config.api.baseUrl + url,
       method,
       data,
-      header: { ...CUSTOM_HEADERS, ...headers },
+      header: { ...config.api.headers, ...headers },
       timeout,
       success: async (response) => {
         try {

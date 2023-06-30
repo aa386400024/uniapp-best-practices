@@ -1,5 +1,5 @@
 import { PiniaPluginContext, PiniaPlugin } from 'pinia';
-import { STORAGE_KEY } from '@/config';
+import config from '@/config';
 
 // 定义持久化状态的键
 type PersistStateKeys = readonly { storeId: string; key: string }[];
@@ -12,7 +12,7 @@ export const piniaPersistPlugin: PiniaPlugin = ({ store }: PiniaPluginContext) =
   ];
 
   // 获取已有的本地数据并将其合并到 store 中
-  const persistedState = uni.getStorageSync(STORAGE_KEY);
+  const persistedState = uni.getStorageSync(config.constants.storageKey);
   if (persistedState) {
     store.$patch(JSON.parse(persistedState));
   }
@@ -30,10 +30,10 @@ export const piniaPersistPlugin: PiniaPlugin = ({ store }: PiniaPluginContext) =
           const { [stateKey.key]: value } = store.$state;
   
           // 获取已有的本地数据
-          const existingData = JSON.parse(uni.getStorageSync(STORAGE_KEY) || '{}');
+          const existingData = JSON.parse(uni.getStorageSync(config.constants.storageKey) || '{}');
   
           // 将指定状态保存到本地存储中
-          uni.setStorageSync(STORAGE_KEY, JSON.stringify({ ...existingData, [stateKey.key]: value }));
+          uni.setStorageSync(config.constants.storageKey, JSON.stringify({ ...existingData, [stateKey.key]: value }));
         }
       }
     });
