@@ -1,1 +1,1 @@
-"use strict";exports.StatusBar={statusBar:{bgColor:"transparent"}};
+"use strict";const t={statusBar:{bgColor:"transparent"}};exports.StatusBar=t;

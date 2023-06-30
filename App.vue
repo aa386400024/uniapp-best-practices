@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss">
-@import '@/styles/global.scss'
+@import '@/styles/index.scss'
 	/*每个页面公共css */
 	
 </style>

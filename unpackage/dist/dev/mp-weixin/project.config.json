@@ -15,10 +15,11 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "condition": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.30.0",
+  "libVersion": "2.32.0",
   "appid": "touristappid",
   "projectname": "formwork",
   "condition": {},

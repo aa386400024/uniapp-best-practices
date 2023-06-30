@@ -54,6 +54,7 @@ export default defineConfig({
 	// 定义环境变量
 	define: {
 		'process.env.VUE_APP_TEST': JSON.stringify('test'),
+		'process.env.BASE_URL': JSON.stringify('https://cat-fact.herokuapp.com'), 
 	},
 	// 构建配置
 	build: {

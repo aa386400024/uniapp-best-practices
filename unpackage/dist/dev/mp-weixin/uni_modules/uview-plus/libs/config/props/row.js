@@ -1,1 +1,1 @@
-"use strict";exports.Row={row:{gutter:0,justify:"start",align:"center"}};
+"use strict";const t={row:{gutter:0,justify:"start",align:"center"}};exports.Row=t;

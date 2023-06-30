@@ -1,1 +1,1 @@
-"use strict";require("./uni.promisify.adaptor.js");const s=[require("../uni_modules/uview-plus/index.js").uviewPlus];exports.plugins=s,exports.setupPlugins=function(s,u=[]){u.forEach((u=>{s.use(u)}))};
+"use strict";require("./uni.promisify.adaptor.js");const i=require("../uni_modules/uview-plus/index.js"),n=[i.uviewPlus];function l(u,s=[]){s.forEach(e=>{u.use(e)})}exports.plugins=n;exports.setupPlugins=l;

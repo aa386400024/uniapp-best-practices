@@ -41,26 +41,6 @@
 				"define": {
 					"DEV": true
 				}
-			},
-			"mp-weixin-production": {
-				"title": "微信小程序 - 生产环境",
-				"env": {
-					"UNI_PLATFORM": "mp-weixin",
-					"BASE_URL": "https://cat-fact.herokuapp.com"
-				},
-				"define": {
-					"PRODUCTION": true
-				}
-			},
-			"mp-weixin-testing": {
-				"title": "微信小程序 - 测试环境",
-				"env": {
-					"UNI_PLATFORM": "mp-weixin",
-					"BASE_URL": "https://cat-fact.herokuapp.com"
-				},
-				"define": {
-					"TESTING": true
-				}
 			}
 		}
 	},
