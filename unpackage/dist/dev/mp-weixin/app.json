@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/home/index"
   ],
   "subPackages": [
     {
-      "root": "pages/auth/pages",
+      "root": "sub_packages/auth/pages",
       "pages": [
         "login/index",
         "register/index"
