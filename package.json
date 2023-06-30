@@ -1,5 +1,6 @@
 {
 	"devDependencies": {
+		"@types/validator": "^13.7.17",
 		"@vue/test-utils": "^2.0.0-rc.18",
 		"vue-jest": "^5.0.0-alpha.10"
 	},
@@ -58,6 +59,8 @@
 				"foo"
 			]
 		}
+	},
+	"dependencies": {
+		"validator": "^13.9.0"
 	}
-
 }
