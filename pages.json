@@ -7,6 +7,25 @@
 			}
 		}
 	],
+	"subPackages": [
+	    {
+	      "root": "pages/auth/pages",
+	      "pages": [
+	        {
+	          "path": "login/index",
+	          "style": {
+	            "navigationBarTitleText": "登录"
+	          }
+	        },
+	        {
+	          "path": "register/index",
+	          "style": {
+	            "navigationBarTitleText": "注册"
+	          }
+	        }
+	      ]
+	    }
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
