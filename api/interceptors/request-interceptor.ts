@@ -1,5 +1,5 @@
 
-import { RequestOptions } from '@/utils/request'
+import { RequestOptions } from '@/utils/api/request'
 
 export function requestInterceptor(config: RequestOptions): RequestOptions {
   // 在这里处理请求拦截逻辑

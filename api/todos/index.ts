@@ -1,6 +1,6 @@
 // api/todos/index.ts
 
-import { request, RequestOptions } from '@/utils/request'
+import { request, RequestOptions } from '@/utils/api/request'
 
 // 一个示例API请求函数
 export async function fetchTodos(): Promise<any> {
