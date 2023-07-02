@@ -8,18 +8,20 @@
     "urlCheck": false,
     "es6": true,
     "postcss": false,
-    "minified": false,
+    "minified": true,
     "newFeature": true,
     "bigPackageSizeSupport": true,
+    "packNpmRelationList": [],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "condition": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.30.0",
-  "appid": "touristappid",
+  "libVersion": "2.32.0",
+  "appid": "wx168b000ef63ed2db",
   "projectname": "formwork",
   "condition": {},
   "editorSetting": {

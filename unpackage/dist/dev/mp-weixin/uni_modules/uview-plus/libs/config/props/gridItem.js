@@ -1,1 +1,1 @@
-"use strict";exports.GridItem={gridItem:{name:null,bgColor:"transparent"}};
+"use strict";const t={gridItem:{name:null,bgColor:"transparent"}};exports.GridItem=t;

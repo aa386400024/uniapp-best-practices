@@ -1,1 +1,1 @@
-"use strict";exports.SwipeAction={swipeAction:{autoClose:!0}};
+"use strict";const t={swipeAction:{autoClose:!0}};exports.SwipeAction=t;

@@ -7,7 +7,6 @@
 │  LICENSE                        # 许可证文件
 │  main.js                        # 主js文件，入口文件
 │  manifest.json                  # 应用配置文件
-│  myfolder.txt                   # 暂时不明确作用的文件
 │  package.json                   # npm包管理文件
 │  pages.json                     # 页面配置文件
 │  README.md                      # 项目的读我文件
@@ -49,10 +48,21 @@
 ├─node_modules                    # npm包目录
 │  └─.vite
 ├─pages                           # 页面目录
-│  └─index                        # 示例页面目录
-│          index.test.js          # 示例页面测试文件
-│          index.vue              # 示例页面文件
-│          
+│  ├─home                         # home
+│  │       index.test.js          # home页面测试文件
+│  │       index.vue              # home页面文件
+│  └─my                           # my
+│          index.test.js          		# my页面测试文件
+│          index.vue              		# my页面文件
+├─sub_packages                    # 分包页面目录
+│   └─auth						  # 用户相关
+│		├─pages					  		# pages
+│		│  ├─login							# 登录
+│		│  │      index.vue						# 登录页面文件
+│		│  └─register						# 注册
+│		│          index.vue					# 注册页面文件
+│		└─services						# 用户相关服务
+│				authService.ts					# 用户相关服务文件
 ├─plugins                         # 插件目录
 │      index.ts                   # 插件入口文件
 │      uni.promisify.adaptor.ts   # 示例插件
@@ -66,6 +76,13 @@
 │  │  
 │  └─modules                      # Vuex模块目录
 │          counter.ts             # 示例Vuex模块
+│
+├─styles						  # 样式目录，存放所有全局样式文件
+│   common.scss                   		# 存放项目中通用样式的文件
+│   index.scss                    		# SCSS入口文件，通常用于导入所有其他样式文件
+│   mixins.scss                   		# 存放SCSS的mixin定义，用于代码复用
+│   utilities.scss                		# 存放工具类样式，比如边距、字体大小等，常常用于快速布局
+│   variables.scss                		# 存放全局SCSS变量，比如颜色、字体等项目主题相关的定义
 ├─test-log                          # 测试日志目录
 │  └─uni-formwork
 │      └─h5

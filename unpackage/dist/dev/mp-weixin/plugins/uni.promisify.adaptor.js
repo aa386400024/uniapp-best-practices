@@ -1,1 +1,1 @@
-"use strict";require("../common/vendor.js").index.addInterceptor({returnValue:e=>!e||"object"!=typeof e&&"function"!=typeof e||"function"!=typeof e.then?e:new Promise(((t,n)=>{e.then((e=>e[0]?n(e[0]):t(e[1])))}))});
+"use strict";const u=require("../common/vendor.js");u.index.addInterceptor({returnValue(t){return t&&(typeof t=="object"||typeof t=="function")&&typeof t.then=="function"?new Promise((e,o)=>{t.then(n=>n[0]?o(n[0]):e(n[1]))}):t}});

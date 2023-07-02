@@ -1,0 +1,15 @@
+/* utilities.scss 实用的样式工具类，如清除浮动、隐藏元素等 */
+
+/* Clearfix Utility */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Hidden Utility */
+.hidden {
+  display: none !important;
+}
+
+/* ... */

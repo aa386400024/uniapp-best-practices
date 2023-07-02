@@ -1,1 +1,1 @@
-"use strict";exports.combineURLs=function(e,r){return r?`${e.replace(/\/+$/,"")}/${r.replace(/^\/+/,"")}`:e};
+"use strict";function n(c,e){return e?`${c.replace(/\/+$/,"")}/${e.replace(/^\/+/,"")}`:c}exports.combineURLs=n;

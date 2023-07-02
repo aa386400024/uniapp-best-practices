@@ -1,1 +1,1 @@
-"use strict";require("./core/Request.js");
+"use strict";const e=require("./core/Request.js");

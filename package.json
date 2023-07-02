@@ -1,5 +1,6 @@
 {
 	"devDependencies": {
+		"@types/validator": "^13.7.17",
 		"@vue/test-utils": "^2.0.0-rc.18",
 		"vue-jest": "^5.0.0-alpha.10"
 	},
@@ -41,26 +42,6 @@
 				"define": {
 					"DEV": true
 				}
-			},
-			"mp-weixin-production": {
-				"title": "微信小程序 - 生产环境",
-				"env": {
-					"UNI_PLATFORM": "mp-weixin",
-					"BASE_URL": "https://cat-fact.herokuapp.com"
-				},
-				"define": {
-					"PRODUCTION": true
-				}
-			},
-			"mp-weixin-testing": {
-				"title": "微信小程序 - 测试环境",
-				"env": {
-					"UNI_PLATFORM": "mp-weixin",
-					"BASE_URL": "https://cat-fact.herokuapp.com"
-				},
-				"define": {
-					"TESTING": true
-				}
 			}
 		}
 	},
@@ -78,6 +59,8 @@
 				"foo"
 			]
 		}
+	},
+	"dependencies": {
+		"validator": "^13.9.0"
 	}
-
 }
