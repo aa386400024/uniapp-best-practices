@@ -1,1 +1,1 @@
-"use strict";const i=require("../helpers/isAbsoluteURL.js"),s=require("../helpers/combineURLs.js");function e(l,u){return l&&!i.isAbsoluteURL(u)?s.combineURLs(l,u):u}exports.buildFullPath=e;
+"use strict";const e=require("../helpers/isAbsoluteURL.js"),s=require("../helpers/combineURLs.js");exports.buildFullPath=function(r,i){return r&&!e.isAbsoluteURL(i)?s.combineURLs(r,i):i};

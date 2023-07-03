@@ -79,7 +79,7 @@
 │
 ├─styles						  # 样式目录，存放所有全局样式文件
 │   common.scss                   		# 存放项目中通用样式的文件
-│   index.scss                    		# SCSS入口文件，通常用于导入所有其他样式文件
+│   index.scss                    		# SCSS入口文件，用于导入所有其他样式文件
 │   mixins.scss                   		# 存放SCSS的mixin定义，用于代码复用
 │   utilities.scss                		# 存放工具类样式，比如边距、字体大小等，常常用于快速布局
 │   variables.scss                		# 存放全局SCSS变量，比如颜色、字体等项目主题相关的定义

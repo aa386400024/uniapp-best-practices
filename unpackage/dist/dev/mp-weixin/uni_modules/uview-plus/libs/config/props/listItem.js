@@ -1,1 +1,1 @@
-"use strict";const t={listItem:{anchor:""}};exports.ListItem=t;
+"use strict";exports.ListItem={listItem:{anchor:""}};

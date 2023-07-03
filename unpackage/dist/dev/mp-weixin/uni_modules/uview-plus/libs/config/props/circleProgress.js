@@ -1,1 +1,1 @@
-"use strict";const r={circleProgress:{percentage:30}};exports.CircleProgress=r;
+"use strict";exports.CircleProgress={circleProgress:{percentage:30}};

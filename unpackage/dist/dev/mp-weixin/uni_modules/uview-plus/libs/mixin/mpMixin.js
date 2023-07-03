@@ -1,1 +1,1 @@
-"use strict";const i={options:{virtualHost:!0}};exports.mpMixin=i;
+"use strict";exports.mpMixin={options:{virtualHost:!0}};
