@@ -1,15 +1,171 @@
 /* mixins.scss 定义混入，用于复用样式片段 */
 
-/* Flexbox Mixin */
-@mixin flexbox($justify-content: center, $align-items: center) {
-  display: flex;
-  justify-content: $justify-content;
-  align-items: $align-items;
+// 媒体查询的 mixin
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == 'phone' {
+		@media (max-width: 599px) {
+			@content;
+		}
+	} @else if $breakpoint == 'tablet-portrait' {
+		@media (min-width: 600px) and (max-width: 900px) {
+			@content;
+		}
+	} @else if $breakpoint == 'tablet-landscape' {
+		@media (min-width: 901px) and (max-width: 1200px) {
+			@content;
+		}
+	} @else if $breakpoint == 'desktop' {
+		@media (min-width: 1201px) {
+			@content;
+		}
+	}
 }
 
-/* Transition Mixin */
-@mixin transition($property: all, $duration: 0.3s, $timing-function: ease-in-out) {
-  transition: $property $duration $timing-function;
+// flex布局的 mixin
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-/* ... */
+// 清除浮动的 mixin
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+// 文本溢出显示省略号的 mixin
+@mixin ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+// 绝对居中定位的 mixin
+@mixin absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// 流式布局的 mixin
+@mixin fluid-grid($property, $min-value, $max-value, $min-viewport: 320px, $max-viewport: 1200px) {
+	#{$property}: $min-value;
+	@media screen and (min-width: $min-viewport) and (max-width: $max-viewport) {
+		#{$property}: calc(
+			#{$min-value} + (#{$max-value} - #{$min-value}) * ((100vw - #{$min-viewport}) /
+						(#{$max-viewport} - #{$min-viewport}))
+		);
+	}
+	@media screen and (min-width: $max-viewport) {
+		#{$property}: $max-value;
+	}
+}
+
+// 嵌套图片自适应 mixin
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	& > img,
+	& > video,
+	& > iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// 生成简单的渐变背景 mixin
+@mixin gradient-bg($start-color, $end-color) {
+	background: $start-color;
+	background: linear-gradient(to right, $start-color, $end-color);
+}
+
+// 生成阴影效果 mixin
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+// 生成文本阴影效果 mixin
+@mixin text-shadow($shadow) {
+	text-shadow: $shadow;
+}
+
+// 生成圆角效果 mixin
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// 生成动画效果 mixin
+@mixin animation($animation) {
+	-webkit-animation: $animation;
+	-moz-animation: $animation;
+	-ms-animation: $animation;
+	-o-animation: $animation;
+	animation: $animation;
+}
+
+// 生成过渡效果 mixin
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+// 生成2倍视网膜显示屏图片背景 mixin
+@mixin retina-bg($filename, $extension, $width, $height) {
+	background-image: url('#{$filename}.#{$extension}');
+	@media (min--moz-device-pixel-ratio: 2),
+		(-o-min-device-pixel-ratio: 2/1),
+		(-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		background-image: url('#{$filename}@2x.#{$extension}');
+		background-size: $width $height;
+	}
+}
+
+// 生成多列布局 mixin
+@mixin columns($column-count: 2, $column-gap: 1em) {
+	-webkit-column-count: $column-count;
+	-moz-column-count: $column-count;
+	column-count: $column-count;
+	-webkit-column-gap: $column-gap;
+	-moz-column-gap: $column-gap;
+	column-gap: $column-gap;
+}
+
+// CSS Grid布局的快捷方式 mixin
+@mixin grid($rows, $columns, $gap: 1em) {
+	display: grid;
+	grid-template-rows: repeat($rows, 1fr);
+	grid-template-columns: repeat($columns, 1fr);
+	grid-gap: $gap;
+}
+
+// 定义字体包 mixin
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $font-family;
+		src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
