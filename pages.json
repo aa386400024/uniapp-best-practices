@@ -77,7 +77,14 @@
 			}
 		]
 	},
-	"uniIdRouter": {},
+	"uniIdRouter": {
+		"loginPage": "sub_packages/auth/pages/login/index", // 登录页面路径
+		"needLogin": [
+			"pages/detail/.*", // 需要登录才可访问的页面列表，可以使用正则语法
+			"sub_packages/auth/.*"
+		],
+		"resToLogin": true // 自动解析云对象及clientDB的错误码，如果是客户端token不正确或token过期则自动跳转配置的登录页面，配置为false则关闭此行为，默认true
+	},
 	"condition": { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式(list 的索引项)
 		"list": [{
