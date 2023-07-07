@@ -1,9 +1,8 @@
 import path from 'path'
 import fs from 'fs-extra'
-import {
-	defineConfig
-} from 'vite'
+import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
+import TransformPages from 'uni-read-pages-vite'
 
 // 复制自定义静态资源目录
 // 将项目中的 'images' 文件夹复制到打包后的输出目录中
@@ -55,6 +54,7 @@ export default defineConfig({
 	define: {
 		'process.env.VUE_APP_TEST': JSON.stringify('test'),
 		'process.env.BASE_URL': JSON.stringify('https://cat-fact.herokuapp.com'), 
+		'ROUTES': new TransformPages(__dirname).routes, // 注入路由表
 	},
 	// 构建配置
 	build: {

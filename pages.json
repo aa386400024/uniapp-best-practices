@@ -2,23 +2,27 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/home/index",
+			"name": "home",
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
 		}, {
 			"path": "pages/practice/index",
+			"name": "practice",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 		}, {
 			"path": "pages/my/index",
+			"name": "my",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 		}, {
 			"path": "pages/circle/index",
+			"name": "circle",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
@@ -29,12 +33,14 @@
 		"root": "sub_packages/auth/pages",
 		"pages": [{
 				"path": "login/index",
+				"name": "login",
 				"style": {
 					"navigationBarTitleText": "登录"
 				}
 			},
 			{
 				"path": "register/index",
+				"name": "register",
 				"style": {
 					"navigationBarTitleText": "注册"
 				}

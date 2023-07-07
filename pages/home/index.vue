@@ -10,6 +10,10 @@
 import { computed, onMounted } from 'vue';
 import { useCounterStore } from '@/stores';
 import { todos } from '@/api';
+import { useRouter } from 'uni-mini-router'
+
+let router = useRouter()
+console.log(router, 'routerrouter')
 
 const counterStore = useCounterStore();
 
